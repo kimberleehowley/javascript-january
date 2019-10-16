@@ -22,12 +22,11 @@ function validAnagram(str1, str2) {
         // If the letter does not exist, return false, not an anagram 
         if (!lookup[letter]) {
             return false; 
-        // Else, decrement the value in the object if it is in str2
+        // Else, decrement the value in the object if it is in str2, we've found a letter 
         } else {
             lookup[letter] -= 1; 
         }
     }
     // Otherwise, return true, we have an anagram!
     return true; 
-
 }
