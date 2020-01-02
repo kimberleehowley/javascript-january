@@ -1,0 +1,1 @@
+All of the projects in this folder come from Wes Bos' amazing 30 day JS challenge. Learn more here: https://javascript30.com/
