@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <title>JS Drum Kit</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Lobster&display=swap" rel="stylesheet">
   </head>
   <body>
     <img
       src="https://www.billboard.com/files/styles/768x433/public/media/Lizzo-Truth-Hurts-screenshot-2019-billboard-1500.jpg"
-      alt="Headshot of Lizzo in wedding veil"
+      alt="Headshot of Lizzo in wedding veil" class = "lizzo"
     />
     <div class="keys">
       <div data-key="84" class="key">
@@ -31,6 +32,9 @@
         <kbd>H</kbd>
         <span class="sound">boom</span>
       </div>
+
+      <p class="heart">💘</p>
+
       <div data-key="72" class="key">
         <kbd>H</kbd>
         <span class="sound">boom</span>
@@ -52,6 +56,8 @@
         <span class="sound">tink</span>
       </div>
     </div>
+
+    <p class="footnote">Inspired by Lizzo and Wes' Bos JavaScript 30 Drum Kit.</p>
 
     <audio data-key="85" src="sounds/clap.wav"></audio>
     <audio data-key="82" src="sounds/hihat.wav"></audio>
