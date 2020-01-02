@@ -58,6 +58,19 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  // Get the element we're listening for; for us, is whole window
+  // Then, we'll listen for that event 
+  window.addEventListener('keydown', function(e) {
+    
+    // Check for element on the page with corresponding data-key that user pressed.
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`) 
+    
+    // Stop the function from running if there is no sound corresponding to key pressed. 
+    if(!audio) return; 
+
+    // Otherwise, just play the audio! 
+    audio.play(); 
+  })
 
 </script>
 
