@@ -5,9 +5,7 @@
     <title>JS + CSS Clock</title>
   </head>
   <body>
-    
-    
-    
+  
     <div class="wrapper">
       <div class="clock">
         <div class="clock-face">
@@ -17,10 +15,9 @@
         </div>
       </div>
       
-  
       <div class='image-container'>
   
-          <img src="https://media.giphy.com/media/H7lnI5XnczdCafxaZL/giphy.gif" /> 
+          <img class="dolly" src="https://media.giphy.com/media/H7lnI5XnczdCafxaZL/giphy.gif" /> 
           
           <img src="https://media.giphy.com/media/fuWXSsDroVI0moqPew/giphy.gif" alt="Letters 9 to 5 in bright pink"/> 
           
@@ -87,6 +84,10 @@
         display: flex; 
         flex-direction: column; 
       }
+
+      .visible {
+        background: red; 
+      }
     </style>
 
     <script>
@@ -99,6 +100,9 @@
       // Hour hand
       const hourHand = document.querySelector(".hour-hand");
 
+      // Dolly 
+      const dolly = document.querySelectorAll(".dolly"); 
+      
       function setDate() {
         const now = new Date();
         // Gets current time in seconds
@@ -123,10 +127,13 @@
         secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
         minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
         hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
       }
 
-      // Sets how often setDate function runs
+      // Calls setDate at a given interval 
       setInterval(setDate, 1000);
+    
+      
     </script>
   </body>
 </html>
