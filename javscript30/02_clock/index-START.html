@@ -71,9 +71,20 @@
   </style>
 
   <script>
+    function setDate() {
+      const now = new Date(); 
+      // Gets current time in seconds 
+      const seconds = now.getSeconds(); 
 
+      // Converts seconds to degrees
+      const secondsDegrees = ((seconds / 60) * 360); 
+      console.log(seconds); 
+    }
+
+    // Sets how often setDate function runs 
+    setInterval(setDate, 1000); 
 
   </script>
-  
+
 </body>
 </html>
