@@ -69,13 +69,16 @@
     // Selecting all the inputs 
     inputs = document.querySelectorAll('.controls input'); 
 
+    // Defining the function we call on our event listeners 
     function handleUpdate() {
       // Grabbing the unit 
       const suffix = this.dataset.sizing || ''; 
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix); 
-      
+      // Whenever you hover over a property name (change or mousemove, see event listeners)
+      // Change the value associated with that property
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);   
     }
 
+    // Calling that function whenever each of our events occurs 
     inputs.forEach(input => input.addEventListener('change', handleUpdate)); 
     inputs.forEach(input => input.addEventListener('mousemove', handleUpdate)); 
 
