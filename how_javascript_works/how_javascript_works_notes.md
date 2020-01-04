@@ -12,3 +12,4 @@ http://www.crockford.com/javascript/
 - Holdovers from 50's with limited memory: no spaces in variable names; reserved words -- all to save memory 
 
 ## 2 How numbers work 
+- Single number type: `number` 
