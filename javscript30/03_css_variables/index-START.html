@@ -5,7 +5,7 @@
   <title>Scoped CSS Variables and JS</title>
 </head>
 <body>
-  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+  <h2>Update CSS Variables with <span class='highlighter'>JS</span></h2>
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
@@ -21,6 +21,27 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
+
+    /*
+      CSS variables
+    */
+
+    :root {
+      --base: yellow; 
+      --spacing: 10px; 
+      --blur: 10px; 
+    }
+    
+
+    img {
+      padding: var(--spacing); 
+      background: var(--base); 
+      filter: blur(var(--blur)); 
+    }
+
+    .highlighter {
+      color: var(--base); 
+    }
 
     /*
       misc styles, nothing to do with CSS variables
@@ -45,6 +66,8 @@
   </style>
 
   <script>
+    // Selecting all the inputs 
+    controls = document.querySelectorAll('.controls input'); 
   </script>
 
 </body>
