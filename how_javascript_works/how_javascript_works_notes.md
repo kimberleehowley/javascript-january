@@ -20,3 +20,4 @@ http://www.crockford.com/javascript/
 - It also has some handy properties, like `.MAX_SAFE_INTEGER` 
 - Bitwise operators convert numbers to signed 32 bit ints, then converts them back to JS numbers 
 - There are useful methods on Math.object, like `Math.floor` and `Math.trunc`, or .min, .max, and .random 
+- Work as much as possible in the Safe Integer range 
