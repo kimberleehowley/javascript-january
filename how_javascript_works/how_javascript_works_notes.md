@@ -19,3 +19,4 @@ http://www.crockford.com/javascript/
 - Number, with the capital `N`: a function that can create numbers 
 - It also has some handy properties, like `.MAX_SAFE_INTEGER` 
 - Bitwise operators convert numbers to signed 32 bit ints, then converts them back to JS numbers 
+- There are useful methods on Math.object, like `Math.floor` and `Math.trunc`, or .min, .max, and .random 
