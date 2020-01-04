@@ -13,3 +13,9 @@ http://www.crockford.com/javascript/
 
 ## 2 How numbers work 
 - Single number type: `number` 
+- With JavaScript numbers, there's not a risk of overflow 
+- Infinity is a value that represents all numbers too large to be represented 
+- NaN: not a number 
+- Number, with the capital `N`: a function that can create numbers 
+- It also has some handy properties, like `.MAX_SAFE_INTEGER` 
+- Bitwise operators convert numbers to signed 32 bit ints, then converts them back to JS numbers 
