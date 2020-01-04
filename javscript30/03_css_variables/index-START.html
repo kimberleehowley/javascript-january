@@ -67,7 +67,14 @@
 
   <script>
     // Selecting all the inputs 
-    controls = document.querySelectorAll('.controls input'); 
+    inputs = document.querySelectorAll('.controls input'); 
+
+    function handleUpdate() {
+      console.log(this.value); 
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate)); 
+
   </script>
 
 </body>
