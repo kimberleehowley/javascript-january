@@ -36,6 +36,9 @@
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+    // Map is like a factory machine: takes in raw material, stamps, takes ot new item stamped 
+    const namesArray = inventors.map(inventor => inventor.first + ' ' + inventor.last); 
+    console.log(namesArray); 
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
