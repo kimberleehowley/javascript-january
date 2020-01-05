@@ -24,3 +24,4 @@ http://www.crockford.com/javascript/
 
 ## 3 How big integers work 
 - Crockford presents a library for getting around JavaScript's single integer type limitation 
+- A useful reference if I ever need to work with numbers over 64 bits 
