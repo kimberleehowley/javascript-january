@@ -29,6 +29,18 @@ fetch(endpoint)
   // We convert the data into the format we need, spreading into array with spread operator 
   .then(data => cities.push(...data)); 
 
+// Function that filters and finds matches 
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place => {
+    // Need to check if the cities contains the word searched for 
+
+    // Create reg expression to search for 
+    const regex = new RegExp(wordToMatch, 'gi'); 
+    // Checks if city or state has what user entered 
+    return place.city.match(regex) || place.state.match(regex); 
+
+  })
+}
 
 </script>
 </body>
