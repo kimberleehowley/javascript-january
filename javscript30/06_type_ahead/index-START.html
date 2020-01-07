@@ -15,7 +15,20 @@
     </ul>
   </form>
 <script>
+
+// Grabbing JSON link 
 const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+// Set up empty array for data 
+const cities = []; 
+
+// Fetch returns a promise 
+fetch(endpoint)
+  // We work with a promise using .then 
+  .then(blob => blob.json())
+  // We convert the data into the format we need, spreading into array with spread operator 
+  .then(data => cities.push(...data)); 
+
 
 </script>
 </body>
