@@ -42,11 +42,21 @@ function findMatches(wordToMatch, cities) {
 }
 
 function displayMatches() {
-  console.log(this.value); 
+  const matchArray = findMatches(this.value, cities); 
+  const html = matchArray.map(place => {
+    return `
+      <li> 
+        <span class="name">${place.city}, ${place.state}</span>
+        <span class="population">${place.population}</span>
+      </li>
+    `; 
+  // Call join to convert array to string 
+  }).join('');
+  suggestions.innerHTML = html; 
 }
 
 // Creating constant to hold what user wants to search for 
-const searchInput = document.querySelector('.search'); 
+const searchInput = document.querySelector('.search');
 // And suggestions
 const suggestions = document.querySelector('.suggestions'); 
 
