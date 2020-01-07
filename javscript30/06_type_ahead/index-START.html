@@ -38,9 +38,21 @@ function findMatches(wordToMatch, cities) {
     const regex = new RegExp(wordToMatch, 'gi'); 
     // Checks if city or state has what user entered 
     return place.city.match(regex) || place.state.match(regex); 
-
   })
 }
+
+function displayMatches() {
+  console.log(this.value); 
+}
+
+// Creating constant to hold what user wants to search for 
+const searchInput = document.querySelector('.search'); 
+// And suggestions
+const suggestions = document.querySelector('.suggestions'); 
+
+// Add event listener to searchInput 
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
 
 </script>
 </body>
