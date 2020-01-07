@@ -11,7 +11,7 @@ http://www.crockford.com/javascript/
 - So don't use them for variable names! 
 - Holdovers from 50's with limited memory: no spaces in variable names; reserved words -- all to save memory 
 
-## 2 How numbers work 
+## 2: How numbers work 
 - Single number type: `number` 
 - With JavaScript numbers, there's not a risk of overflow 
 - Infinity is a value that represents all numbers too large to be represented 
@@ -22,10 +22,14 @@ http://www.crockford.com/javascript/
 - There are useful methods on Math.object, like `Math.floor` and `Math.trunc`, or .min, .max, and .random 
 - Work as much as possible in the Safe Integer range 
 
-## 3 How big integers work 
+## 3: How big integers work 
 - Crockford presents a library for getting around JavaScript's single integer type limitation 
 - A useful reference if I ever need to work with numbers over 64 bits 
 
-## 4 How big floating point works
+## 4: How big floating point works
 - Three numbers determine a floating point system:
 - `value = _coefficient_ * (_basis_ ** _exponent)`
+
+## 5: How big rationals work 
+- _Rational number_: number that can be expressed as the ratio of two integers.
+- Provides an additional library to import, potentially useful for reference. 
