@@ -21,7 +21,21 @@
   // Setting styles of lines 
   ctx.strokeStyle = '#BADA55'; 
   ctx.lineJoin = 'round'; 
-  ctx.lineCap = 'round'; 
+  ctx.lineCap = 'round';
+
+  // Setting dummy, state-holding variables (flags)
+  let isDrawing = false; 
+  // For coordinates 
+  let lastX = 0; 
+  let lastY = 0; 
+
+  // Function to draw whenever mouse moves 
+  function draw(e) {
+    console.log(e); 
+  }
+
+  // Adding an event listener for when mouse moves to canvas
+  canvas.addEventListener('mousemove', draw); 
 
 </script>
 
