@@ -22,17 +22,24 @@
   ctx.strokeStyle = '#BADA55'; 
   ctx.lineJoin = 'round'; 
   ctx.lineCap = 'round';
+  ctx.lineWidth = 100; 
+  // Makes lines that overlap blend 
+  ctx.globalCompositeOperation = 'multiply'; 
 
   // Setting dummy, state-holding variables (flags)
   let isDrawing = false; 
   // For coordinates 
   let lastX = 0; 
   let lastY = 0; 
+  // For color and style 
+  let hue = 0; 
+  let direction = true; 
 
   // Function to draw whenever mouse moves and is clicked down 
   function draw(e) {
     if(!isDrawing) return; // Stop function from running if not mouse down 
     console.log(e); 
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`; 
     // Starts line 
     ctx.beginPath(); 
     // Start from 
@@ -42,8 +49,23 @@
     // Makes line happen 
     ctx.stroke(); 
 
+
     // Destructuring the array 
     [lastX, lastY] = [e.offsetX, e.offsetY]; 
+    // Changes the hue 
+    hue++; 
+    if(hue >= 360) {
+      hue = 0; 
+    }
+    // Makes line width bigger each time 
+    if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+      direction = !direction; 
+    }
+    if(direction) {
+      ctx.lineWidth++;
+    } else {
+      ctx.lineWidth--; 
+    }
 
   }
 
