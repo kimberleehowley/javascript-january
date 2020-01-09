@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+<canvas id="draw" width="800" height="800"></canvas>
+<script>
+
+  // Grabbing the canvas that we need to draw on
+  const canvas = document.querySelector('#draw');
+
+  // Grab the context we'll be working with 
+  const ctx = canvas.getContext('2d'); 
+
+  // Set canvas dimensions 
+  canvas.width = window.innerWidth; 
+  canvas.height = window.innerHeight; 
+
+  // Setting styles of lines 
+  ctx.strokeStyle = '#BADA55'; 
+  ctx.lineJoin = 'round'; 
+  ctx.lineCap = 'round'; 
+
+</script>
+
+<style>
+  html, body {
+    margin: 0;
+  }
+</style>
+
+</body>
+</html>
