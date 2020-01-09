@@ -41,15 +41,27 @@
     ctx.lineTo(e.offsetX, e.offsetY); 
     // Makes line happen 
     ctx.stroke(); 
-    lastX = e.offsetX; 
-    lastY = e.offsetY; 
+
+    // Destructuring the array 
+    [lastX, lastY] = [e.offsetX, e.offsetY]; 
+
   }
 
   // Adding an event listener for when mouse moves over canvas
   canvas.addEventListener('mousemove', draw); 
 
   // Event listener to register that we're drawing when mouse down so we're drawing; and when goes up or out 
-  canvas.addEventListener('mousedown', () => isDrawing = true); 
+  canvas.addEventListener('mousedown', (e) => {
+    
+    isDrawing = true;
+    // Updates last X and Y before we move the mouse, so we don't start at 0! 
+    // Instead, we start wherever the user clicks 
+    [lastX, lastY] = [e.offsetX, e.offsetY]; 
+
+    }); 
+
+
+
   canvas.addEventListener('mouseup', () => isDrawing = false); 
   canvas.addEventListener('mouseout', () => isDrawing = false); 
 
