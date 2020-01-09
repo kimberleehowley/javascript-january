@@ -35,10 +35,14 @@
     console.log(e); 
     // Starts line 
     ctx.beginPath(); 
+    // Start from 
     ctx.moveTo(lastX, lastY); 
+    // Go to 
     ctx.lineTo(e.offsetX, e.offsetY); 
     // Makes line happen 
     ctx.stroke(); 
+    lastX = e.offsetX; 
+    lastY = e.offsetY; 
   }
 
   // Adding an event listener for when mouse moves over canvas
