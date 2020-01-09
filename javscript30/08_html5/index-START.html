@@ -33,6 +33,12 @@
   function draw(e) {
     if(!isDrawing) return; // Stop function from running if not mouse down 
     console.log(e); 
+    // Starts line 
+    ctx.beginPath(); 
+    ctx.moveTo(lastX, lastY); 
+    ctx.lineTo(e.offsetX, e.offsetY); 
+    // Makes line happen 
+    ctx.stroke(); 
   }
 
   // Adding an event listener for when mouse moves over canvas
