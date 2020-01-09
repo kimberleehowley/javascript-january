@@ -33,3 +33,13 @@ http://www.crockford.com/javascript/
 ## 5: How big rationals work 
 - _Rational number_: number that can be expressed as the ratio of two integers.
 - Provides an additional library to import, potentially useful for reference. 
+
+## 6: How booleans work 
+- Return true or false
+- Avoid mixing types when comparing with booleans! 
+- False-y values: false, null, undefined, "" (empty string), 0, NaN 
+- Everything else: truth-y 
+- Boolishness! Values acting like they are true, but not strictly true, or the same goes with false. 
+- De Morgan Laws:
+!(p && q) === !p || !q
+!(p || q) === !p && !q 
