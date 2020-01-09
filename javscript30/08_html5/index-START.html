@@ -29,13 +29,19 @@
   let lastX = 0; 
   let lastY = 0; 
 
-  // Function to draw whenever mouse moves 
+  // Function to draw whenever mouse moves and is clicked down 
   function draw(e) {
+    if(!isDrawing) return; // Stop function from running if not mouse down 
     console.log(e); 
   }
 
-  // Adding an event listener for when mouse moves to canvas
+  // Adding an event listener for when mouse moves over canvas
   canvas.addEventListener('mousemove', draw); 
+
+  // Event listener to register that we're drawing when mouse down so we're drawing; and when goes up or out 
+  canvas.addEventListener('mousedown', () => isDrawing = true); 
+  canvas.addEventListener('mouseup', () => isDrawing = false); 
+  canvas.addEventListener('mouseout', () => isDrawing = false); 
 
 </script>
 
