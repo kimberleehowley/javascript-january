@@ -43,3 +43,17 @@ http://www.crockford.com/javascript/
 - De Morgan Laws:
 !(p && q) === !p || !q
 !(p || q) === !p && !q 
+
+## 7: How arrays work 
+- Array: contiguous section of memory, divided into equal chunks, each associated with and accessed by integer
+- JSON treats arrays and objects differently even though JS treats the same 
+- Use .isArray, not typeof, to check array types (typeof returns Object)
+- Stack methods: pop(), removes and returns last element; push(), appends new element; shift(), returns zeroth element instead of last ; unshift(), new element at front 
+- Shift() and unshift() are slower than pop(), push()
+- Shift + push = queue-like behavior 
+- Iterative array methods: .every, .some, .find, .findIndex, .filter, .map 
+- Sorting array methods: use sort, but pass in a comparison function 
+- .concat(): concatenates two arrays 
+- .join(): takes an array of trings and separator string, makes one big string 
+- .reverse();
+- .slice(): makes copy of an orray, or copy of a part of an array 
