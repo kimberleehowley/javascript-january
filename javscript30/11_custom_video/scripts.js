@@ -14,4 +14,5 @@ function togglePlay() {
     video[method](); 
 }
 
-// Hook up event listener 
+// Hook up event listeners
+video.addEventListener('click', togglePlay); 
