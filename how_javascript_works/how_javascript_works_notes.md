@@ -57,3 +57,5 @@ http://www.crockford.com/javascript/
 - .join(): takes an array of trings and separator string, makes one big string 
 - .reverse();
 - .slice(): makes copy of an orray, or copy of a part of an array 
+
+## 8: How Objects work 
