@@ -59,4 +59,4 @@ http://www.crockford.com/javascript/
 - .slice(): makes copy of an orray, or copy of a part of an array 
 
 ## 8: How Objects work 
-### 
+- Object is JavaScript's primary data structure 
