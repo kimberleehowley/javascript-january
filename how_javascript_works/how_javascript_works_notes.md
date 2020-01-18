@@ -59,4 +59,5 @@ http://www.crockford.com/javascript/
 - .slice(): makes copy of an orray, or copy of a part of an array 
 
 ## 8: How Objects work 
-- Object is JavaScript's primary data structure 
+- Everything is an object!  
+- Object is JavaScript's primary data structure: a container of properties, each with a _name_ and _value_. 
