@@ -63,3 +63,43 @@ http://www.crockford.com/javascript/
 - Object is JavaScript's primary data structure: a container of properties, each with a _name_ and _value_. 
 - Object literal can create new objects, indicated by `{name:value, ...}`
 - Functions can be included in objects 
+- We can access values in objects using dot `myobject.grace` or bracket `myobject[grace]` notation. 
+- Don't store values of undefined in Objects. 
+- You can remove vaues with the `delete` operator. 
+- Object keys are case sensitive! `object.grace` is not equal to `object.Grace`
+- `Object.assign`: copies properties from one object to another 
+- `Object.create(prototype)`: takes an existing Object and returns a new Object that inherits from the existing Object
+- Prototypes used to store functions 
+- `own properties`: live in top-most object
+- `inherited properties`: live in the prototype chain 
+- `JSON.stringify`: converts an object to a string 
+- `Object.create` uses less memory than `Object.assign` 
+- `Object.keys` returns properties of an object as an array of strings
+- `Object.freeze` freezes an object, making it immutable 
+- Since keys in objects _have_ to be strings, use a _WeakMap_ if you need to create something like an object, but that uses objects as the keys 
+- WeakMap can be useful for creating sealers and unsealers 
+
+## 9: How strings work 
+- `String`: immutable array of 16 bit unsigned integers from 0-65535
+- `String.fromCharCode`: makes strings 
+- Strings have a length property 
+- Using bracket notation returns a new string whose (vs. arrays)
+- `String.prototype`: methods that act on strings
+- `.slice` and `.concat` are similar to arrays, but `.indexof` takes a string as a parameter
+- Similar strings are considered to be the same object by `===`
+- Use double quotes when creating strings 
+- `\` before double quotes when creating string literals 
+
+## 10: How bottom values work 
+- `Bottom values` indicate the end of a recursive data structure, or the absences of values, e.g. null, nill 
+- In JS, these are `null` and `undefined` 
+- Recommends exclusively using undefined 
+
+## How statements work 
+- Declarations: `let`, `function`, `const` 
+- Functions should not be declared in if, switch, or while statements 
+- Const encourages "greater purity" 
+- Assignment statement: repaces reference in a variable, or modifies mutable object or array 
+- Four parts of an assignment statement: 1) lvalue (expression that receives the value), 2) Assignment operator, 3) Expression, 4) Semicolon 
+- Claims incrementing is not safe; pointer aritmetic is outdated 
+- Prefers if to switch statements 
