@@ -103,3 +103,5 @@ http://www.crockford.com/javascript/
 - Four parts of an assignment statement: 1) lvalue (expression that receives the value), 2) Assignment operator, 3) Expression, 4) Semicolon 
 - Claims incrementing is not safe; pointer aritmetic is outdated 
 - Prefers if to switch statements 
+
+## How functions work 
