@@ -95,7 +95,7 @@ http://www.crockford.com/javascript/
 - In JS, these are `null` and `undefined` 
 - Recommends exclusively using undefined 
 
-## How statements work 
+## 11: How statements work 
 - Declarations: `let`, `function`, `const` 
 - Functions should not be declared in if, switch, or while statements 
 - Const encourages "greater purity" 
@@ -104,4 +104,45 @@ http://www.crockford.com/javascript/
 - Claims incrementing is not safe; pointer aritmetic is outdated 
 - Prefers if to switch statements 
 
-## How functions work 
+## 12: How functions work 
+- The first programs were called routines: list or orders or instructions loaded into a machine along with some data 
+- Subroutines were invented to avoid dealing with routines as single lists; they could be collected into libraries 
+- Grace Hopper, A-0, first compiler 
+- The function operator makes function objects: it takes a parameter list and a body 
+- When a function is called, an activation object is created 
+- `Closure`: A function object holding reference to the activation object of the outer function 
+
+## 13: How generators work 
+- Argues these are unnecessary and should not be used 
+
+## 14: How exceptions work 
+- Exception handlers deal with, well, the unexpected 
+- `throw "That does not compute.";`
+- `try` attaches an exception handler to a block via a `catch` statement 
+- A function should not contain more than one try 
+
+## 15: How programs work 
+- JavaScript is delievered to execution site in source form 
+- An engine at the execution site compiles the JS source code 
+- Inline scripts still not best practice 
+- Number, Math, Array, and Object are `primordials` made available to every source unit 
+- Recommends against global variables 
+- Export and import modules solve a lot of scope problems 
+
+## 16: How _this_ works 
+- JavaScript implements a `prototypal` model: when a new Object is created, a prototype can be designated that inherits some or all of the new object's contents 
+- Objects are just containers of properties; and prototypes are just Objects 
+- Methods are functions stored in objects 
+- Prototypes used to store methods 
+- `this` tells a function in a prototype which Object to work on 
+- `this` binding only works on method calls 
+- It is also bound dynamically, while other elements bound statically 
+- Recommends not using `this`, because confusing (validating)
+
+## 17: How Class Free works 
+- Types are not that great, he argues 
+
+## 18: How Tail Calls work 
+- _Tail call optimization_ 
+- Tail call: the last thing a function does is return the result of calling a function (think of it like _return_ call)
+- Returns the immediately _invoked_ function 
