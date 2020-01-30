@@ -146,3 +146,9 @@ http://www.crockford.com/javascript/
 - _Tail call optimization_ 
 - Tail call: the last thing a function does is return the result of calling a function (think of it like _return_ call)
 - Returns the immediately _invoked_ function 
+
+## 19: How Purity works 
+- Pure functions depend only on inputs and are easier to test
+- Recommends not using Object.assign, or any methods that modify objects 
+- Not using for, or while and do loops 
+- Doesn't recommend defaulting to global variables 
