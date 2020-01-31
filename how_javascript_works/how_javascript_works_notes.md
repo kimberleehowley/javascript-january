@@ -170,3 +170,12 @@ http://www.crockford.com/javascript/
 - getYear does not work after 1999; use getFullYear
 - `new Date` takes a string that represents a date and produces an Object for that date 
 - JavaScript numbers will not fail to accmulate until 285426 
+
+## 22: How JSON works 
+- JSON solved the problem of needing to exchange data between programs written in different languages 
+- Works because most languages have a data structure that associates names with values 
+- "JavaScript was bad and followed Java" then, "I did what Date did and decided on parse" (22.5)
+- `.parse` takes JSON text and decodes into JS data; its optional reviver function can make transformations 
+- `.stringify` takes a _value_ and encodes it into JSON text; optional replacer can make transformations 
+
+## 23: How Testing works 
