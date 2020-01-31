@@ -179,3 +179,6 @@ http://www.crockford.com/javascript/
 - `.stringify` takes a _value_ and encodes it into JSON text; optional replacer can make transformations 
 
 ## 23: How Testing works 
+- Advocates saving some development cycles for removing unnecessary code 
+- JSCheck is a library that does case generation 
+- This isn ot how testing works. This is how the particular library _you wrote_ works. 
