@@ -152,3 +152,13 @@ http://www.crockford.com/javascript/
 - Recommends not using Object.assign, or any methods that modify objects 
 - Not using for, or while and do loops 
 - Doesn't recommend defaulting to global variables 
+
+## 20: How Eventual Programming works 
+- JavaScript graduates from sequential (one thing at a time) to _concurrent_ programming 
+- _Eventual function_: Function that returns immediately, maybe even before the work requested is finished 
+- Eventual functions depend on _callback functions_ (once that will be called at a later point, when something happens in the program) and processing loops 
+- The Law of Turns: Never wait, never block, finish fast 
+- Argues Async Await is outdated; transforms sequential into eventual code 
+- Each unit of work should be a separate function 
+- _Requestor_: Takes a callback and performs a unit of work that might not be done until a future turn 
+- Parseq library manages flow between requestor functions 
