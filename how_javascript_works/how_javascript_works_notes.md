@@ -162,3 +162,11 @@ http://www.crockford.com/javascript/
 - Each unit of work should be a separate function 
 - _Requestor_: Takes a callback and performs a unit of work that might not be done until a future turn 
 - Parseq library manages flow between requestor functions 
+
+## 21: How Date works 
+- Calendars are really messed up, based on old notions (Roman, even), never really updated 
+- Argues for a different system (But why opine?)
+- The `Date` function in JS has a lot of get and set methods, some `to` as well 
+- getYear does not work after 1999; use getFullYear
+- `new Date` takes a string that represents a date and produces an Object for that date 
+- JavaScript numbers will not fail to accmulate until 285426 
