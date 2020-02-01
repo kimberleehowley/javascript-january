@@ -182,3 +182,30 @@ http://www.crockford.com/javascript/
 - Advocates saving some development cycles for removing unnecessary code 
 - JSCheck is a library that does case generation 
 - This isn ot how testing works. This is how the particular library _you wrote_ works. 
+
+## 24: How Optimizing works 
+- Better to measure performance than to "fiddle with code" 
+
+## 25: How Transpiling works 
+- Transpilers translate one programming language into another 
+- Neo is a transpiled language 
+- Talking about future languages when I want to learn existing 
+
+## 26: How Tokenizing works 
+- First step in processing a program is to break it into tokens 
+
+## 27: How Parsing works 
+- Parsing: weaves the stream of token objects into a tree; look for errors in the source 
+
+## 28: How code generation works 
+- Code generation: takes the tree that the parser wove and transforms it into an executable form 
+
+## 29: How runtimes work 
+- More about Neo 
+
+## 30: How Wat! works 
+- Argues `===` is the correct equality operator 
+- JavaScript is funny some times! 
+
+## 31: How this book works
+- Argues the next evolution in programming paradigms will be Distributed Eventual Programming 
