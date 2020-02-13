@@ -12,6 +12,36 @@
 <script>
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+  const recognition = new SpeechRecognition(); 
+  recognition.interimResults = true; 
+
+  let p = document.createElement('p'); 
+  const words = document.querySelector('.words'); 
+  words.appendChild(p); 
+
+  recognition.addEventListener('result', e => {
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('')
+
+      p.textContent = transcript; 
+
+      // Check if done talking 
+      if(e.results[0].isFinal) {
+        // If done, add the new paragraph to the list underneath the other 
+        p = document.createElement('p'); 
+        words.appendChild(p); 
+      }
+
+      console.log(transcript); 
+  }); 
+
+  // Starts up after breaks 
+  recognition.addEventListener('end', recognition.start); 
+
+  recognition.start(); 
+
 
 </script>
 
