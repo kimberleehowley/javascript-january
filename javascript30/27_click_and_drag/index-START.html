@@ -35,6 +35,43 @@
   </div>
 
 <script>
+  // Grabbing surrounding div 
+  const slider = document.querySelector('.items'); 
+  
+  // Flag to see if clicking 
+  let isDown = false; 
+  
+  // Values happening in events 
+  let startX; 
+  let scrollLeft; 
+
+  // Adding event listeners 
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true; 
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;   
+    // Helps us figure out where starting point was 
+    scrollLeft = slider.scrollLeft; 
+  }) 
+  slider.addEventListener('mouseleave', () => {
+    isDown = false; 
+    slider.classList.remove('active'); 
+  })
+  slider.addEventListener('mouseup', () => {
+    isDown = false; 
+    slider.classList.remove('active'); 
+  })
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return; // Stops function from running 
+    e.preventDefault(); 
+    // Figuring out where move cursor to 
+    const x = e.pageX - slider.offsetLeft;  
+    // Tell how far we've moved
+    const walk = (x - startX) * 3; 
+    // Make div a slider 
+    slider.scrollLeft = scrollLeft - walk; 
+  }) 
+
 </script>
 
   </body>
