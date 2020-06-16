@@ -15,3 +15,4 @@ I initially planned to focus on learning JavaScript in the month of January 2020
 * [x] [Wes Bos' JavaScript 30](https://javascript30.com/)
 * [] [Modern JavaScript Tutorial](https://javascript.info/)
 * [] [Practical JavaScript](https://watchandcode.com/p/practical-javascript)
+* [] [Web UI JavaScript testing](https://testautomationu.applitools.com/learningpaths.html?id=web-ui-javascript-path)
