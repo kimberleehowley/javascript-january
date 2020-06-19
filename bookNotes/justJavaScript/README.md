@@ -46,3 +46,22 @@ x = 0; // Point variable x to value 0 instead
 ### Notes from exercises 
 * Variables don't have types in JavaScript; only values do. 
 * The left side of an assignment must always be a "wire". Literals are not wires. 
+
+## 04. Counting the Values (Part 1) 
+* JavaScript world for what it is, instead of _how_. 
+* "To me, each string is a value." 
+* "_The foundation of our model is that our world is full of values._"
+* Counting is to distinguish things from one another. 
+* Distinguishing values, finding the distinct, helps us understand equality in JavaScript. 
+### Value types
+* _Undefined_: There is only one value of this type. It represents the concept of an intentionally missing value.  
+* _Null_: Only one value of this type, and it pretends to be an Object. 
+* _Booleans_: Only two values, true or false. 
+#### Script 0 
+```javascript
+let isSad = true; // point isSad to boolean true
+let isHappy = !isSad; // point isHappy to boolean false 
+let isFeeling = isSad || isHappy // point isFeeling to true, because one of the values is true 
+let isConfusing = isSad && isHappy // point to false, because only one is true 
+```
+* _Numbers_: Floating point math powers JavaScript. Rounding mistakes accumulate over time! In our universe, "there is exactly one number value for every mathematical number that can be represented with 64-bit floating point math." NaN, not a number 
