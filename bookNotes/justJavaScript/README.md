@@ -65,3 +65,24 @@ let isFeeling = isSad || isHappy // point isFeeling to true, because one of the 
 let isConfusing = isSad && isHappy // point to false, because only one is true 
 ```
 * _Numbers_: Floating point math powers JavaScript. Rounding mistakes accumulate over time! In our universe, "there is exactly one number value for every mathematical number that can be represented with 64-bit floating point math." NaN, not a number 
+
+## 05. Counting the Values (Part 2) 
+* _BigInts_: Represent extremely big numbers, and are useful for financial calculations that need precision. There is an infinite number of possible BigInts. 
+* _Strings_: Represent texts in JavaScript. Can be written with single quotes, double quotes, and backticks. Strings are _not_ objects, but they have a few built-in properties, like .length and string[index]. But! They are Primitive Values, so cannot be changed. 
+#### Snippet 0 
+```javascript 
+let answer = prompt('Enter your name'); // Prompts for user input 
+console.log(answer); // _Summons_ a string the user enters 
+```
+* In this mental model, we assume, "...all conceivable string values already exist from the beginning — one value for every distinct string." 
+* _Symbols_: These are new and a bit tricky; not as important for the model to start. 
+* _Objects_: arrays, dates, RegExps, and other non-primitive values. Objects _are_ mutable, hooray! Their properties can be accessed with dot or bracket notation. In our mental model, unlike strings or numbers, where we summon a value that we assume already exists, we can _create_ entirely new Objects. But, we can't necessarily destroy objects ourselves, "JavaScript is a garbage-collected language." 
+* _Functions_: Another kind of value. This is an important mindshift. Think about a function that is a console.log loop. If it is a number to be console.log'd, only one value is passed each time, but if it is an Object passed, a new Object value is passed each time. The same goes for Functions! A new Function would be passed each time, and I can think of them like special Objects. 
+
+#### Snippet 1 
+```javascript
+let countDwarves = function() { return 7; }; // Create a new function 
+let dwarves = countDwarves; // Assign the value dwarves to the function 
+console.log(dwarves); // The function is what is console.log'd; the function is never called!
+```
+* A _call expression_, e.g. `countDwarves()`, runs the code inside our function and returns the value. 
