@@ -86,3 +86,27 @@ let dwarves = countDwarves; // Assign the value dwarves to the function
 console.log(dwarves); // The function is what is console.log'd; the function is never called!
 ```
 * A _call expression_, e.g. `countDwarves()`, runs the code inside our function and returns the value. 
+
+## 06. Equality of Values 
+* Working in JS can be like having conversations at a masked ball. 
+
+### Kinds of Equality 
+#### Same Value Equality: Object.is(a, b)
+* `Object.is(a, b)` tells us if a and b are the same value. 
+* This is "Same Value Equality" 
+
+#### Strict Equality: a === b 
+* Also !== 
+* Is almost identical to Same Value Equality. Both signify that the same value is summoned (according to our mental model). 
+##### Special Case 0: NaN 
+* NaN === NaN is false! 
+##### Special Case 1: -0 
+* Both 0 === -0 and -0 === 0 are true! 
+
+#### Loose Equality 
+* Try to refrain from double equals; always use triple (strict). 
+* "Abstract equality" is now regarded as a bad design decision. 
+
+#### Exercise notes 
+* Object literals create completely new Objects! 
+* In our mental model, there is only one NaN value. 
