@@ -110,3 +110,34 @@ console.log(dwarves); // The function is what is console.log'd; the function is 
 #### Exercise notes 
 * Object literals create completely new Objects! 
 * In our mental model, there is only one NaN value. 
+
+## 07. Properties 
+### Snippet 0 
+```javascript
+let sherlock = {
+  surname: 'Holmes',
+  address: { city: 'London' } 
+};
+
+let john = {
+  surname: 'Watson',
+  address: sherlock.address
+};
+
+// John makes some changes 
+john.surname = 'Lennon';
+john.address.city = 'Malibu';
+
+// After those changes, our values are... 
+console.log(sherlock.surname); // Holmes
+console.log(sherlock.address.city); // Malibu -- because john's address was a property of sherlock, it also changes sherlock!
+console.log(john.surname); // Lennon
+console.log(john.address.city); // Malibu 
+```
+* Objects are useful for grouping data together. 
+* Unlike variables, _properties belong to a particular object._ In this way, the "wires" of properties start from Objects, not from our code. 
+* If we try to read a property that does not yet exist in an Object, JavaScript will respond with "undefined". That does not mean the property exists and is undefined!  
+* "An expression like obj.property is calculated in three steps:
+1) Figure out which value is on the left.
+2) If it’s null or undefined, throw an error.
+3) If that property exists, the result is the value its wire points to. If that property doesn’t exist, the result is undefined." 
