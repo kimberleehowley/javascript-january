@@ -141,3 +141,13 @@ console.log(john.address.city); // Malibu
 1) Figure out which value is on the left.
 2) If it’s null or undefined, throw an error.
 3) If that property exists, the result is the value its wire points to. If that property doesn’t exist, the result is undefined." 
+
+## 08. Mutation 
+* In this JS mental model, objects might _look_ nested, but they are not. An object cannot be "inside" of another object! 
+* Properties always point at values. So! `address: sherlock.address` points to the Object, not the "address" wire. 
+* Mutation is a fancy way of saying "change" 
+* Good ways to change values that cover shared information include mutating another "new" object, or I could "reset" the existing object (no mutation involved at all). 
+* The `const` keyword can be used as an alternative to `let`. 
+* `const` creates read-only variables. While we can't point `const` to a new value, we _can_ mutate the object it points at!! 
+* I need more work on this mental model in understanding when objects are mutated vs. not. 
+* I'm having a tough time telling when an object that points to another one is also mutated. 
